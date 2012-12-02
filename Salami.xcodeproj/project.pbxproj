@@ -17,7 +17,7 @@
 		06A46AC1166B5ABB002AC0AF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A46AC0166B5ABB002AC0AF /* Default@2x.png */; };
 		06A46AC3166B5ABB002AC0AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A46AC2166B5ABB002AC0AF /* Default-568h@2x.png */; };
 		06A46AC6166B5ABB002AC0AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A46AC5166B5ABB002AC0AF /* ViewController.m */; };
-		06A46AC9166B5ABB002AC0AF /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A46AC7166B5ABB002AC0AF /* ViewController_iPhone.xib */; };
+		06A46AC9166B5ABB002AC0AF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A46AC7166B5ABB002AC0AF /* ViewController.xib */; };
 		06A46AD4166B5ABB002AC0AF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A46AD3166B5ABB002AC0AF /* SenTestingKit.framework */; };
 		06A46AD5166B5ABB002AC0AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A46AAC166B5ABB002AC0AF /* UIKit.framework */; };
 		06A46AD6166B5ABB002AC0AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A46AAE166B5ABB002AC0AF /* Foundation.framework */; };
@@ -52,7 +52,7 @@
 		06A46AC2166B5ABB002AC0AF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		06A46AC4166B5ABB002AC0AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		06A46AC5166B5ABB002AC0AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		06A46AC8166B5ABB002AC0AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		06A46AC8166B5ABB002AC0AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		06A46AD2166B5ABB002AC0AF /* SalamiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalamiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A46AD3166B5ABB002AC0AF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		06A46ADB166B5ABB002AC0AF /* SalamiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalamiTests-Info.plist"; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				06A46ABC166B5ABB002AC0AF /* AppDelegate.m */,
 				06A46AC4166B5ABB002AC0AF /* ViewController.h */,
 				06A46AC5166B5ABB002AC0AF /* ViewController.m */,
-				06A46AC7166B5ABB002AC0AF /* ViewController_iPhone.xib */,
+				06A46AC7166B5ABB002AC0AF /* ViewController.xib */,
 				06A46AB3166B5ABB002AC0AF /* Supporting Files */,
 			);
 			path = Salami;
@@ -239,7 +239,7 @@
 				06A46ABF166B5ABB002AC0AF /* Default.png in Resources */,
 				06A46AC1166B5ABB002AC0AF /* Default@2x.png in Resources */,
 				06A46AC3166B5ABB002AC0AF /* Default-568h@2x.png in Resources */,
-				06A46AC9166B5ABB002AC0AF /* ViewController_iPhone.xib in Resources */,
+				06A46AC9166B5ABB002AC0AF /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,12 +307,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		06A46AC7166B5ABB002AC0AF /* ViewController_iPhone.xib */ = {
+		06A46AC7166B5ABB002AC0AF /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				06A46AC8166B5ABB002AC0AF /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 		06A46ADC166B5ABB002AC0AF /* InfoPlist.strings */ = {
@@ -381,10 +381,12 @@
 		06A46AE5166B5ABB002AC0AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Salami/Salami-Prefix.pch";
 				INFOPLIST_FILE = "Salami/Salami-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

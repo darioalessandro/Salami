@@ -55,6 +55,13 @@
 {
     [super viewDidLoad];
     [self configureView];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self refreshRect];
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
     [self refreshRect];
 }
 
