@@ -18,12 +18,12 @@
 		06A46AC3166B5ABB002AC0AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A46AC2166B5ABB002AC0AF /* Default-568h@2x.png */; };
 		06A46AC6166B5ABB002AC0AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A46AC5166B5ABB002AC0AF /* ViewController.m */; };
 		06A46AC9166B5ABB002AC0AF /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A46AC7166B5ABB002AC0AF /* ViewController_iPhone.xib */; };
-		06A46ACC166B5ABB002AC0AF /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A46ACA166B5ABB002AC0AF /* ViewController_iPad.xib */; };
 		06A46AD4166B5ABB002AC0AF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A46AD3166B5ABB002AC0AF /* SenTestingKit.framework */; };
 		06A46AD5166B5ABB002AC0AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A46AAC166B5ABB002AC0AF /* UIKit.framework */; };
 		06A46AD6166B5ABB002AC0AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A46AAE166B5ABB002AC0AF /* Foundation.framework */; };
 		06A46ADE166B5ABB002AC0AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A46ADC166B5ABB002AC0AF /* InfoPlist.strings */; };
 		06A46AE1166B5ABB002AC0AF /* SalamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A46AE0166B5ABB002AC0AF /* SalamiTests.m */; };
+		06A46AEB166B5BA4002AC0AF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A46AEA166B5BA4002AC0AF /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +53,13 @@
 		06A46AC4166B5ABB002AC0AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		06A46AC5166B5ABB002AC0AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		06A46AC8166B5ABB002AC0AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		06A46ACB166B5ABB002AC0AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		06A46AD2166B5ABB002AC0AF /* SalamiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalamiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A46AD3166B5ABB002AC0AF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		06A46ADB166B5ABB002AC0AF /* SalamiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalamiTests-Info.plist"; sourceTree = "<group>"; };
 		06A46ADD166B5ABB002AC0AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		06A46ADF166B5ABB002AC0AF /* SalamiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalamiTests.h; sourceTree = "<group>"; };
 		06A46AE0166B5ABB002AC0AF /* SalamiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalamiTests.m; sourceTree = "<group>"; };
+		06A46AEA166B5BA4002AC0AF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A46AEB166B5BA4002AC0AF /* QuartzCore.framework in Frameworks */,
 				06A46AAD166B5ABB002AC0AF /* UIKit.framework in Frameworks */,
 				06A46AAF166B5ABB002AC0AF /* Foundation.framework in Frameworks */,
 				06A46AB1166B5ABB002AC0AF /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +90,7 @@
 		06A46A9D166B5ABB002AC0AF = {
 			isa = PBXGroup;
 			children = (
+				06A46AEA166B5BA4002AC0AF /* QuartzCore.framework */,
 				06A46AB2166B5ABB002AC0AF /* Salami */,
 				06A46AD9166B5ABB002AC0AF /* SalamiTests */,
 				06A46AAB166B5ABB002AC0AF /* Frameworks */,
@@ -124,7 +126,6 @@
 				06A46AC4166B5ABB002AC0AF /* ViewController.h */,
 				06A46AC5166B5ABB002AC0AF /* ViewController.m */,
 				06A46AC7166B5ABB002AC0AF /* ViewController_iPhone.xib */,
-				06A46ACA166B5ABB002AC0AF /* ViewController_iPad.xib */,
 				06A46AB3166B5ABB002AC0AF /* Supporting Files */,
 			);
 			path = Salami;
@@ -239,7 +240,6 @@
 				06A46AC1166B5ABB002AC0AF /* Default@2x.png in Resources */,
 				06A46AC3166B5ABB002AC0AF /* Default-568h@2x.png in Resources */,
 				06A46AC9166B5ABB002AC0AF /* ViewController_iPhone.xib in Resources */,
-				06A46ACC166B5ABB002AC0AF /* ViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,14 +313,6 @@
 				06A46AC8166B5ABB002AC0AF /* en */,
 			);
 			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		06A46ACA166B5ABB002AC0AF /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06A46ACB166B5ABB002AC0AF /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		06A46ADC166B5ABB002AC0AF /* InfoPlist.strings */ = {
