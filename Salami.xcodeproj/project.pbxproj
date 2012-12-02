@@ -453,6 +453,7 @@
 				06A46AE6166B5ABB002AC0AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06A46AE7166B5ABB002AC0AF /* Build configuration list for PBXNativeTarget "SalamiTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +462,7 @@
 				06A46AE9166B5ABB002AC0AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

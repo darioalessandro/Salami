@@ -65,10 +65,19 @@
 
 -(void)addOverlayRect{
     self.rectOverlay=[CAShapeLayer layer];
-    self.rectOverlay.lineWidth=5;
     self.rectOverlay.fillColor=[UIColor colorWithRed:0.5 green:0.1 blue:0.1 alpha:0.6].CGColor;
-    self.rectOverlay.borderColor=[UIColor blackColor].CGColor;
+    self.rectOverlay.lineWidth = 4.0f;
+    self.rectOverlay.lineCap = kCALineCapRound;;
+    self.rectOverlay.strokeColor = [[UIColor blackColor] CGColor];
     [self.view.layer addSublayer:self.rectOverlay];
+    
+    self.dottedLinesOverlay=[CAShapeLayer layer];
+    self.dottedLinesOverlay.fillColor=[UIColor clearColor].CGColor;
+    self.dottedLinesOverlay.lineWidth = 4.0f;
+    self.dottedLinesOverlay.lineCap = kCALineCapRound;;
+    self.dottedLinesOverlay.strokeColor = [[UIColor blackColor] CGColor];
+    self.dottedLinesOverlay.lineDashPattern=@[@(5), @(5)];
+    [self.view.layer addSublayer:self.dottedLinesOverlay];
 }
 
 -(void)addGestureRecognizersForViews{
@@ -95,18 +104,40 @@
 }
 
 -(void)refreshRect{
-    UIBezierPath * bezierPath=[UIBezierPath bezierPath];
+    UIBezierPath * rectPath=[UIBezierPath bezierPath];
+    UIBezierPath * dottedLinesPath=[UIBezierPath bezierPath];
+    //Rectangle coordinates
     CGPoint view1Center=[self.view1 center];
     CGPoint view2Center=[self.view2 center];
     CGPoint view3Center=[self.view3 center];
     CGPoint view4Center=[self.view4 center];
     
-    [bezierPath moveToPoint:view1Center];
-    [bezierPath addLineToPoint:view2Center];
-    [bezierPath addLineToPoint:view4Center];    
-    [bezierPath addLineToPoint:view3Center];
-
-    self.rectOverlay.path=bezierPath.CGPath;
+    //central horizontal line coordinates
+    
+    CGPoint view13MiddleCenter=CGPointMake(view1Center.x - (view1Center.x-view3Center.x)/2, view1Center.y-(view1Center.y-view3Center.y)/2);
+    CGPoint view24MiddleCenter=CGPointMake(view2Center.x - (view2Center.x-view4Center.x)/2, view2Center.y-(view2Center.y-view4Center.y)/2);
+    
+    CGPoint view12MiddleCenter=CGPointMake(view1Center.x - (view1Center.x-view2Center.x)/2, view1Center.y-(view1Center.y-view2Center.y)/2);
+    CGPoint view34MiddleCenter=CGPointMake(view3Center.x - (view3Center.x-view4Center.x)/2, view3Center.y-(view3Center.y-view4Center.y)/2);
+    
+    //central vertical line coordinates
+    
+    //Rectangle drawing
+    [rectPath moveToPoint:view1Center];
+    [rectPath addLineToPoint:view2Center];
+    [rectPath addLineToPoint:view4Center];    
+    [rectPath addLineToPoint:view3Center];
+    [rectPath addLineToPoint:view1Center];
+    
+    //Central lines drawing
+    [dottedLinesPath moveToPoint:view13MiddleCenter];
+    [dottedLinesPath addLineToPoint:view24MiddleCenter];
+    
+    [dottedLinesPath moveToPoint:view12MiddleCenter];
+    [dottedLinesPath addLineToPoint:view34MiddleCenter];
+    
+    self.rectOverlay.path=rectPath.CGPath;
+    self.dottedLinesOverlay.path=dottedLinesPath.CGPath;
 }
 
 @end

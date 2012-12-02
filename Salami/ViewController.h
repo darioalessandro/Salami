@@ -52,4 +52,5 @@
 @property (weak, nonatomic) IBOutlet UIView *view3;
 @property (weak, nonatomic) IBOutlet UIView *view4;
 @property(nonatomic, strong) CAShapeLayer * rectOverlay;
+@property(nonatomic, strong) CAShapeLayer * dottedLinesOverlay;
 @end
