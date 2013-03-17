@@ -30,7 +30,7 @@ Just a sample code to answer http://stackoverflow.com/questions/13594391/ios-dra
  *
  * 5. Products derived from this software may not be called "Designed by Dario",
  *    nor may "Designed by Dario" appear in their name, without prior written
- *    permission of the Apache Software Foundation.
+ *    permission.
  *
  * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
